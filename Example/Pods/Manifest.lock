@@ -1,0 +1,16 @@
+PODS:
+  - UIViewExtension (0.1.0)
+
+DEPENDENCIES:
+  - UIViewExtension (from `../`)
+
+EXTERNAL SOURCES:
+  UIViewExtension:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  UIViewExtension: 4d6d2c284a35373f661bb42120b3341fa07d369a
+
+PODFILE CHECKSUM: ee4beacf6c1b9f79c3ba7f4535e7a34b111ce5a0
+
+COCOAPODS: 1.0.1
