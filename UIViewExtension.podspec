@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'UIViewExtension'
-  s.version          = '0.3.0'
+  s.version          = '0.3.1'
   s.summary          = 'Extends UIView to easily customize via Storyboard.'
 
   s.description      = <<-DESC
