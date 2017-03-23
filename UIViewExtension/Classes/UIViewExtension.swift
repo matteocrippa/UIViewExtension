@@ -2,7 +2,7 @@ import UIKit
 import QuartzCore
 
 @IBDesignable extension UIView {
-  @IBInspectable var borderColor: UIColor? {
+  @IBInspectable open var borderColor: UIColor? {
     set {
       layer.borderColor = newValue!.cgColor
     }
@@ -14,7 +14,7 @@ import QuartzCore
       }
     }
   }
-  @IBInspectable var borderWidth: CGFloat {
+  @IBInspectable open var borderWidth: CGFloat {
     set {
       layer.borderWidth = newValue
     }
@@ -22,7 +22,7 @@ import QuartzCore
       return layer.borderWidth
     }
   }
-  @IBInspectable var cornerRadius: CGFloat {
+  @IBInspectable open var cornerRadius: CGFloat {
     set {
       layer.cornerRadius = newValue
       clipsToBounds = newValue > 0
@@ -33,7 +33,7 @@ import QuartzCore
   }
   
   /// The color of the shadow. Defaults to opaque black. Colors created from patterns are currently NOT supported. Animatable.
-  @IBInspectable var shadowColor: UIColor? {
+  @IBInspectable open var shadowColor: UIColor? {
     get {
       return UIColor(cgColor: self.layer.shadowColor!)
     }
@@ -43,7 +43,7 @@ import QuartzCore
   }
   
   /// The opacity of the shadow. Defaults to 0. Specifying a value outside the [0,1] range will give undefined results. Animatable.
-  @IBInspectable var shadowOpacity: Float {
+  @IBInspectable open var shadowOpacity: Float {
     get {
       return self.layer.shadowOpacity
     }
@@ -53,7 +53,7 @@ import QuartzCore
   }
   
   /// The shadow offset. Defaults to (0, -3). Animatable.
-  @IBInspectable var shadowOffset: CGSize {
+  @IBInspectable open var shadowOffset: CGSize {
     get {
       return self.layer.shadowOffset
     }
@@ -63,7 +63,7 @@ import QuartzCore
   }
   
   /// The blur radius used to create the shadow. Defaults to 3. Animatable.
-  @IBInspectable var shadowRadius: Double {
+  @IBInspectable open var shadowRadius: Double {
     get {
       return Double(self.layer.shadowRadius)
     }
@@ -75,7 +75,7 @@ import QuartzCore
 
 // MARK: Dots & Shadows
 extension UIView {
-  func addDashedBorder(color: UIColor) {
+  open func addDashedBorder(color: UIColor) {
     let color = color.cgColor
     
     let shapeLayer: CAShapeLayer = CAShapeLayer()
@@ -94,7 +94,7 @@ extension UIView {
     self.layer.addSublayer(shapeLayer)
   }
   
-  func noShadow() {
+  open func noShadow() {
     
     self.layer.shadowColor = UIColor.clear.cgColor
     self.layer.shadowOpacity = 0
@@ -107,7 +107,7 @@ extension UIView {
 
 // MARK: Subviews handler
 extension UIView {
-  func removeAllSubViews() {
+  open func removeAllSubViews() {
     _ = self.subviews.map {
       $0.removeFromSuperview()
     }
