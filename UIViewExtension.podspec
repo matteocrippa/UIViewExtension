@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'UIViewExtension'
-  s.version          = '0.2.1'
+  s.version          = '0.3.0'
   s.summary          = 'Extends UIView to easily customize via Storyboard.'
 
   s.description      = <<-DESC
@@ -17,5 +17,5 @@ Extends UIView to easily customize via Storyboard, like borderColor, borderSize 
   s.tvos.deployment_target = '9.0'
 
   s.source_files = 'UIViewExtension/Classes/**/*'
-  
+
 end
